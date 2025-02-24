@@ -1,193 +1,178 @@
-/* Body and background styling */
+/* General Body Styling */
 body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
+  flex-direction: column;
   text-align: center;
-  background: linear-gradient(45deg, #a2c2e6, #1e90ff, #a2c2e6);
-  background-size: 200% 200%;
-  animation: backgroundAnimation 10s ease infinite;
 }
 
-/* Animation for background color change */
-@keyframes backgroundAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Counter container and button styling */
+/* Container for the entire page */
 .counter-container {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 15px;
-  width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
   text-align: center;
 }
 
-.counter-container h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.counter {
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 10px;
-  background-color: #ff6347;
-}
-
-.followers-counter {
-  color: #ff0;
-}
-
-.pageviews-counter {
-  color: #32cd32;
-}
-
-/* Button Styles */
-.button-container {
-  margin-top: 20px;
-}
-
-.follow-btn,
-.like-btn,
-.share-btn {
-  background-color: #ff6347;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  font-size: 18px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.follow-btn:hover,
-.like-btn:hover,
-.share-btn:hover {
-  background-color: #ff4500;
-}
-
-/* Profile Picture styling */
+/* Profile Picture Styling */
 .profile-pic-container {
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  border: 5px solid white;
-  visibility: hidden; /* Hidden by default */
+  object-fit: cover;
+  border: 4px solid #0077b6;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* File input for profile picture upload */
+#profile-pic:hover {
+  transform: scale(1.1);
+}
+
+/* Counter Section Styling */
+.counter {
+  font-size: 1.5rem;
+  margin: 10px;
+  color: #0077b6;
+}
+
+.followers-counter {
+  color: #32a852;
+}
+
+.pageviews-counter {
+  color: #e76f51;
+}
+
+/* Buttons Styling */
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #005f87;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Follow Button Specific Animation */
+.follow-btn {
+  background-color: #32a852;
+}
+
+.follow-btn.active {
+  background-color: #008000;
+}
+
+/* Like Button Specific Animation */
+.like-btn {
+  background-color: #e76f51;
+}
+
+.like-btn.active {
+  background-color: #d65a3b;
+}
+
+/* Share Button Specific Animation */
+.share-btn {
+  background-color: #f39c12;
+}
+
+.share-btn.active {
+  background-color: #e67e22;
+}
+
+/* Sign-Up Section Styling */
+.signup-container {
+  margin-top: 20px;
+}
+
+.signup-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #c83e3d;
+  transform: scale(1.05);
+}
+
+/* File Upload Section Styling */
 .file-input-container {
   margin-top: 20px;
 }
 
-input[type="file"] {
-  background-color: #ff6347;
-  border: none;
+/* Sign-Up Form Styling */
+.signup-form-container {
+  margin-top: 20px;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.signup-form-container h3 {
+  margin-bottom: 20px;
+}
+
+.signup-form-container input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 80%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-form-container button {
+  width: 100%;
+  background-color: #32a852;
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 12px;
+  border: none;
+  font-size: 1.1rem;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
-  display: inline-block;
 }
 
-/* File input hover effect */
-input[type="file"]:hover {
-  background-color: #ff4500;
+.signup-form-container button:hover {
+  background-color: #28a745;
 }
 
-/* Media Query for devices with max-width 768px */
-@media (max-width: 768px) {
-  /* Counter container */
-  .counter-container {
-    width: 90%;
-    padding: 20px;
-  }
-
-  /* Adjusting font size for smaller screens */
-  .counter-container h2 {
-    font-size: 24px;
-  }
-
-  .counter {
-    font-size: 24px;
-  }
-
-  .follow-btn,
-  .like-btn,
-  .share-btn {
-    font-size: 16px;
-    padding: 8px 16px;
-  }
-
-  /* Profile Picture */
-  #profile-pic {
-    width: 120px;
-    height: 120px;
-  }
-
-  /* File input for profile picture */
-  input[type="file"] {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-}
-
-/* Additional Media Query for smaller devices, like phones in portrait mode */
-@media (max-width: 480px) {
-  .counter-container {
-    width: 95%;
-    padding: 15px;
-  }
-
-  .counter-container h2 {
-    font-size: 20px;
-  }
-
-  .counter {
-    font-size: 20px;
-  }
-
-  .follow-btn,
-  .like-btn,
-  .share-btn {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-
-  /* Profile Picture */
-  #profile-pic {
-    width: 100px;
-    height: 100px;
-  }
-
-  /* File input for profile picture */
-  input[type="file"] {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
+.signup-form-container button:active {
+  background-color: #218838;
 }
