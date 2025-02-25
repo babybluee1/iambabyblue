@@ -6,7 +6,7 @@
     <title>Followers and Page Views</title>
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Include jQuery if needed for your script -->
+    <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Font Awesome for Icons -->
@@ -16,7 +16,7 @@
     <div class="counter-container">
       <!-- Profile Picture Section -->
       <div class="profile-pic-container">
-        <img id="profile-pic" src="" alt="Profile Picture" />
+        <img id="profile-pic" src="default-profile.jpg" alt="Profile Picture" />
         <div class="upload-icon">
           <i class="fas fa-camera"></i> Upload Picture
         </div>
@@ -25,6 +25,7 @@
       <!-- Followers and Page Views -->
       <div class="counter followers-counter">
         <span id="followers-count">1,000,000</span> Followers
+        <button id="increase-followers" onclick="increaseFollowers()">+1</button>
       </div>
       <div class="counter pageviews-counter">
         <span id="pageviews-count">3,000,000</span> Page Views
