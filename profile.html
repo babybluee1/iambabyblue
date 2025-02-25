@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="profile-container">
+      <h1>Welcome to Your Profile</h1>
+      <div class="profile-pic-container">
+        <img
+          id="profile-pic"
+          src="default-profile-pic.jpg"
+          alt="Profile Picture"
+        />
+      </div>
+      <div class="profile-info">
+        <h2>Username: <span id="profile-username">JohnDoe</span></h2>
+        <p>Email: <span id="profile-email">john.doe@example.com</span></p>
+        <p>Followers: <span id="profile-followers">1,000</span></p>
+        <p>Page Views: <span id="profile-pageviews">10,000</span></p>
+      </div>
+      <div class="button-container">
+        <button onclick="editProfile()">Edit Profile</button>
+      </div>
+    </div>
+  </body>
+</html>
