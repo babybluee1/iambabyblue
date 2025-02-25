@@ -66,11 +66,6 @@ body {
   color: #3498db;
 }
 
-/* Action Buttons */
-.button-container {
-  margin: 20px 0;
-}
-
 button {
   background-color: #3498db;
   color: white;
@@ -81,26 +76,10 @@ button {
   margin: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
 }
 
 button:hover {
   background-color: #2980b9;
-  transform: translateY(-3px);
-}
-
-button i {
-  margin-right: 8px;
-}
-
-/* Sign-Up Button */
-.signup-btn {
-  background-color: #2ecc71;
-}
-
-.signup-btn:hover {
-  background-color: #27ae60;
 }
 
 /* File Input */
@@ -108,7 +87,6 @@ button i {
   margin: 20px 0;
 }
 
-/* Form */
 .signup-form-container {
   margin-top: 20px;
 }
@@ -119,14 +97,4 @@ button i {
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
-
-/* Animation for Buttons */
-button {
-  transform: scale(1);
-  transition: transform 0.2s ease-in-out;
-}
-
-button:hover {
-  transform: scale(1.1);
 }
