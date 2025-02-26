@@ -1,7 +1,6 @@
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7;
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,6 +8,21 @@ body {
   align-items: center;
   height: 100vh;
   flex-direction: column;
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #1e90ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .counter-container {
@@ -19,6 +33,11 @@ body {
   width: 80%;
   max-width: 500px;
   text-align: center;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+  backdrop-filter: blur(10px); /* Optional: adds a blur effect to background */
 }
 
 /* Profile Picture Section */
